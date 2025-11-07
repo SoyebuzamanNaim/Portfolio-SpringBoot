@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soyebuzaman Naim</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.jpeg">
+   
+    <!-- daisyui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/eb373dea9d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="sticky top-0 z-50">
+      <div class="navbar px-2 lg:px-8 z-50">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="-1"
+              class="menu menu-sm dropdown-content rounded-box z-50 mt-3 w-52 p-2 shadow-lg border border-black/10 dark:border-white/10"
+            >
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#tech-stack">Tech Stack</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#my-projects">My Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <a
+            class="font-extrabold text-3xl pl-2 active:scale-95 style-script-regular"
+            href="#home"
+            >Naim</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="active:scale-95 " href="#home">Home</a></li>
+            <li><a class="active:scale-95" href="#about">About</a></li>
+            <li>
+              <a class="active:scale-95" href="#tech-stack">Tech Stack</a>
+            </li>
+            <li>
+              <a class="active:scale-95" href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a class="active:scale-95" href="#my-projects">My Projects</a>
+            </li>
+            <li><a class="active:scale-95" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <button id="theme-toggle" class="active:scale-95">
+            <i class="fa-solid fa-moon text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section -->
+    <section id="home" class="relative z-0">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="video-bg absolute w-full h-full object-cover filter"
+      >
+        <source src="assets/videos/background.mp4" type="video/mp4" />
+      </video>
+
+      <!-- hero content -->
+      <div
+        class="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-20 lg:gap-10 relative z-0 justify-center px-10 py-20 md:p-20"
+      >
+        <div class="text-center md:text-left space-y-4 md:space-y-6 gap-4">
+          <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
+            Hi, I'm
+            <span class="text-white style-script-regular drop-shadow-xl"
+              >Naim</span
+            >
+          </h1>
+          <p class="text-gray-100 text-lg md:text-xl drop-shadow-md">
+            <q
+              >a passionate coder driven by curiosity and creativity. I love
+              transforming ideas into meaningful, impactful web experiences.
+            </q>
+          </p>
+          <div class="flex flex-col md:flex-row gap-4">
+            <a
+              href="#contact"
+              class="px-6 py-3 main-btn text-white font-semibold justify-center flex items-center gap-2 rounded-md"
+            >
+              <i class="fa-solid fa-envelope"></i> Let’s Connect
+            </a>
+            <a
+              href="#my-projects"
+              class="px-6 py-3 main-btn text-white font-semibold justify-center flex items-center gap-2 rounded-md"
+            >
+              <i class="fa-solid fa-folder"></i> My Projects
+            </a>
+            <a
+              href="assets/naim-cv.pdf"
+              target="_blank " download
+              class=" px-6 py-3 main-btn text-white font-semibold justify-center flex items-center gap-2 rounded-md"
+            >
+              <i class="fa-solid fa-file-pdf"></i> Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- hero image -->
+        <div class="scale-110">
+          <img
+            src="assets/images/naim.png"
+            alt="Naim Profile Picture"
+            class="hero-img object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+   <section id="about" class="py-20 gradient-bg">
+     <div class="container mx-auto px-10">
+       <div class="text-center mb-16">
+         <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#about">About Me</a></h2>
+         <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
+       </div>
+
+
+       <div
+         class=" mx-auto about-card p-8 md:p-10 rounded-2xl backdrop-blur-md"
+       >
+         <!-- Tab Buttons -->
+         <div class="flex flex-wrap justify-center gap-4 mb-8">
+           <button
+             id="btn-experience"
+             class="tab-btn active-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+           >
+             <i class="fa-solid fa-briefcase mr-2"></i>Experience
+           </button>
+            <button
+             id="btn-education" 
+             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+           >
+             <i class="fa-solid fa-graduation-cap mr-2"></i>Education
+           </button>
+           <button
+             id="btn-certification"
+             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+           >
+             <i class="fa-solid fa-certificate mr-2"></i>Certification
+           </button>
+           <button
+             id="btn-cp"
+             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+           >
+             <i class="fa-solid fa-code mr-2"></i>Competitive Programming
+           </button>
+            <button
+             id="btn-hobbies" 
+             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+           >
+             <i class="fa-solid fa-palette mr-2"></i>Hobbies
+           </button>
+           
+          
+         </div>
+
+
+         <!-- Content Container -->
+         <div
+           id="info"
+           class="text-center text-lg leading-relaxed transition-all duration-300"
+         ></div>
+       </div>
+     </div>
+   </section>
+
+
+
+    <!-- tech stack section -->
+    <section id="tech-stack" class="py-20 gradient-bg">
+      <div class="container mx-auto px-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#tech-stack">Tech Stack I Use</a></h2>
+          <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
+        </div>
+
+        <!-- tech skills -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
+        >
+          <!-- c -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-c text-2xl"></i>
+                <h3 class="text-lg font-semibold">C</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                85%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="85"
+              max="100"
+            ></progress>
+          </div>
+          <!-- c++ -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-c++ text-lg">C++</i>
+                <h3 class="text-lg font-semibold">C++</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                90%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="90"
+              max="100"
+            ></progress>
+          </div>
+          <!-- java -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-java text-lg"></i>
+                <h3 class="text-lg font-semibold">Java</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                60%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="60"
+              max="100"
+            ></progress>
+          </div>
+          <!-- GitHub -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-github text-lg"></i>
+                <h3 class="text-lg font-semibold">GitHub</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                45%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="45"
+              max="100"
+            ></progress>
+          </div>
+          <!-- firebase -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-fire"></i>
+                <h3 class="text-lg font-semibold">Firebase</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                50%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="50"
+              max="100"
+            ></progress>
+          </div>
+
+          <!-- html -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-html5 text-2xl"></i>
+                <h3 class="text-lg font-semibold">HTML5</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                90%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="90"
+              max="100"
+            ></progress>
+          </div>
+          <!-- css -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-css3 text-2xl"></i>
+                <h3 class="text-lg font-semibold">CSS3</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                70%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="70"
+              max="100"
+            ></progress>
+          </div>
+          <!-- javascript -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-js text-2xl"></i>
+                <h3 class="text-lg font-semibold">JS</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                65%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="65"
+              max="100"
+            ></progress>
+          </div>
+          <!-- react -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-react text-2xl"></i>
+                <h3 class="text-lg font-semibold">React</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                60%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="60"
+              max="100"
+            ></progress>
+          </div>
+          <!-- tailwind css -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-css3 text-2xl"></i>
+                <h3 class="text-lg font-semibold">Tailwind</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                80%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="80"
+              max="100"
+            ></progress>
+          </div>
+          <!-- vite -->
+          <div
+            class="tech-item p-4 md:p-6 rounded-2xl shadow-md backdrop-blur-md hover:scale-105 duration-300"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <i class="fa-brands fa-v text-2xl"></i>
+                <h3 class="text-lg font-semibold">Vite</h3>
+              </div>
+              <div class="text-lg font-extrabold text-center lg:text-left">
+                50%
+              </div>
+            </div>
+            <progress
+              class="progress progress-accent w-full"
+              value="50"
+              max="100"
+            ></progress>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials  -->
+    <section id="testimonials" class="py-20 gradient-bg">
+      <div class="container mx-auto ">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#testimonials">Testimonials</a></h2>
+          <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
+        </div>
+
+        <div class="carousel w-full mx-auto">
+          <!-- Slide 1 -->
+          <div
+            id="slide1"
+            class="carousel-item relative w-full flex justify-center items-center"
+          >
+            <div
+              class="testimonial-card p-8 md:p-10 rounded-2xl backdrop-blur-md w-11/12 md:w-3/4 text-center"
+            >
+              <div class="flex flex-col items-center mb-4">
+                <img
+                  src="assets/images/jihad.jpg"
+                  alt="Jihad"
+                  class="w-16 h-16 rounded-full mb-3 object-cover"
+                />
+                <h4 class="font-semibold text-lg">Jihad Mia</h4>
+                <p class="text-sm opacity-70">Senior Java Developer</p>
+              </div>
+              <p class="italic">
+                "Naim is an exceptional developer with great problem-solving
+                skills. His attention to detail and commitment to quality is
+                outstanding."
+              </p>
+            </div>
+
+            <!-- Nav buttons -->
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide3" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div
+            id="slide2"
+            class="carousel-item relative w-full flex justify-center items-center"
+          >
+            <div
+              class="testimonial-card p-8 md:p-10 rounded-2xl backdrop-blur-md w-11/12 md:w-3/4 text-center"
+            >
+              <div class="flex flex-col items-center mb-4">
+                <img
+                  src="assets/images/sifat.jpg"
+                  alt="Sifat"
+                  class="w-16 h-16 rounded-full mb-3 object-cover"
+                />
+                <h4 class="font-semibold text-lg">Sifat Mazib</h4>
+                <p class="text-sm opacity-70">Senior Software Engineer</p>
+              </div>
+              <p class="italic">
+                "Working with Naim was a pleasure. He delivered high-quality
+                code on time and was always ready to help the team."
+              </p>
+            </div>
+
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div
+            id="slide3"
+            class="carousel-item relative w-full flex justify-center items-center"
+          >
+            <div
+              class="testimonial-card p-8 md:p-10 rounded-2xl backdrop-blur-md w-11/12 md:w-3/4 text-center"
+            >
+              <div class="flex flex-col items-center mb-4">
+                <img
+                  src="assets/images/ajmain.jpg"
+                  alt="Azmain"
+                  class="w-16 h-16 rounded-full mb-3 object-cover"
+                />
+                <h4 class="font-semibold text-lg">Azmain Samir</h4>
+                <p class="text-sm opacity-70">Businessman</p>
+              </div>
+              <p class="italic">
+                "Naim created an amazing website for our business. Professional,
+                responsive, and exactly what we needed."
+              </p>
+            </div>
+
+            <div
+              class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- my projects section -->
+    <section id="my-projects" class="py-24 gradient-bg">
+      <div class="container mx-auto px-6 md:px-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#my-projects">My Projects</a></h2>
+          <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
+        </div>
+
+        <!-- project cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div
+            class="project-card rounded-2xl backdrop-blur-md duration-300 overflow-hidden"
+          >
+            <div class="h-56 md:h-48 flex items-center justify-center">
+              <img
+                src="assets/images/gadget.png"
+                alt="E-Commerce Platform"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-xl md:text-2xl font-bold mb-3">Gadget Heaven</h3>
+              <p class="opacity-70 mb-4">
+                A Frontend e-commerce solution built with React, Context API,
+                React Router, and Tailwind CSS.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-primary">React</span>
+                <span class="badge badge-secondary">React Router</span>
+                <span class="badge badge-accent">Tailwind CSS</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <a
+                  target="_blank"
+                  href="https://gadget-heaven-soyebuzamannaim.surge.sh/"
+                  class="btn btn-sm text-white shadow-lg main-btn"
+                  >Live Demo</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/SoyebuzamanNaim/b10a8-gadget-heaven-SoyebuzamanNaim"
+                  class="btn btn-sm text-white shadow-lg main-btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card rounded-2xl backdrop-blur-md duration-300 overflow-hidden"
+          >
+            <div class="h-56 md:h-48 flex items-center justify-center">
+              <img
+                src="assets/images/sms.png"
+                alt="Student management system"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-xl md:text-2xl font-bold mb-3">
+                Student Management System
+              </h3>
+              <p class="opacity-70 mb-4">
+                A Java based student management system built with Java and local
+                storage.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-primary">Java</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <a
+                  target="_blank"
+                  href="https://github.com/SoyebuzamanNaim/Student-Management-System"
+                  class="btn btn-sm text-white shadow-lg main-btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="project-card rounded-2xl backdrop-blur-md duration-300 overflow-hidden"
+          >
+            <div class="h-56 md:h-48 flex items-center justify-center">
+              <img
+                src="assets/images/devjourney.png"
+                alt="Web development Journey"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6 md:p-8">
+              <h3 class="text-xl md:text-2xl font-bold mb-3">
+                Web development Journey
+              </h3>
+              <p class="opacity-70 mb-4">
+                A Web development journey built with HTML, CSS, and JavaScript.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="badge badge-primary">HTML</span>
+                <span class="badge badge-secondary">CSS</span>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <a
+                  target="_blank"
+                  href="https://soyebuzamannaim.github.io/web-development-journey/"
+                  class="btn btn-sm text-white shadow-lg main-btn"
+                  >Live Demo</a
+                >
+                <a
+                  target="_blank"
+                  href="https://github.com/SoyebuzamanNaim/web-development-journey"
+                  class="btn btn-sm text-white shadow-lg main-btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+          <a
+            href="https://github.com/SoyebuzamanNaim"
+            target="_blank"
+            class="main-btn text-white font-semibold px-8 py-3 inline-flex items-center gap-2"
+          >
+            View More Projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+      <div class="container mx-auto px-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 "><a href="#contact">Get In Touch</a></h2>
+          <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
+        </div>
+
+        <div
+          class="flex flex-col-reverse md:grid md:grid-cols-2 gap-12  mx-auto"
+        >
+          <!-- Contact Info -->
+          <div class="flex flex-col justify-between space-y-8">
+            <div class="space-y-6">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope text-2xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg">Email</h3>
+                  <p class="opacity-70 ">soyebuzamannaim@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-phone text-2xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg">Phone</h3>
+                  <p class="opacity-70 ">01572919076</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-map-marker-alt text-2xl"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg">Location</h3>
+                  <p class="opacity-70">Dhaka, Bangladesh</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex space-x-4 justify-start pt-4">
+              <a
+                href="https://github.com/SoyebuzamanNaim"
+                target="_blank"
+                class="social-link w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fa-brands fa-github text-2xl"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/md-soyebuzaman-naim/"
+                target="_blank"
+                class="social-link w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fa-brands fa-linkedin text-2xl"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/soyebuzamannaim"
+                target="_blank"
+                class="social-link w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fa-brands fa-facebook text-2xl"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/naiminator_who/"
+                target="_blank"
+                class="social-link w-12 h-12 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fa-brands fa-instagram text-2xl"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form p-8 rounded-2xl backdrop-blur-md">
+            <form
+              id="contactForm"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="space-y-6"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="390be4d3-ba0f-49c5-aa4c-3a10bd1b9c4e"
+              />
+
+              <div>
+                <label class=" block text-sm font-medium mb-2">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="input input-bordered w-full"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="input input-bordered w-full"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                  name="message"
+                  class="textarea textarea-bordered w-full h-32"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                id="sendMessageBtn"
+                class="main-btn text-white font-semibold w-full px-6 py-3"
+              >
+                Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section py-8 backdrop-blur-md">
+      <div class="container mx-auto px-10 text-center">
+        <p class="opacity-70 text-sm md:text-base">
+          &copy; 2025
+          <span class="style-script-regular">Soyebuzaman Naim</span>. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <dialog id="success_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box text-center">
+        <div class="flex justify-center mb-4">
+          <div
+            class="success-icon w-16 h-16 rounded-full flex items-center justify-center"
+          >
+            <i class="fa-solid fa-check text-3xl"></i>
+          </div>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
+        <p class="py-4 opacity-70">
+          Thank you for reaching out! I'll get back to you as soon as possible.
+        </p>
+        <div class="modal-action justify-center">
+          <form method="dialog">
+            <button class="main-btn text-white font-semibold px-8 py-3">
+              Close <i class="fa-solid fa-xmark ml-2"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- scroll to top button -->
+    <div id="scrollToTopBtn" class="fixed bottom-5 right-5 z-50">
+      <button class="btn main-btn btn-md btn-primary">
+        <i class="fa-solid fa-arrow-up text-2xl"></i>
+      </button>
+    </div>
+    <!-- script -->
+
+    <script src="main.js"></script>
+  </body>
+</html>

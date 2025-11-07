@@ -1,0 +1,392 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signature-font {
+  font-family: "Momo Signature", cursive;
+}
+
+.style-script-regular {
+  font-family: "Momo Signature", cursive;
+}
+/* light  */
+body {
+  background-color: #eaeaea;
+  color: #0f0f0f;
+}
+
+/* dark  */
+body.dark {
+  background-color: #0a0a0a;
+  color: #f5f5f5;
+}
+
+/* navbar  */
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.482);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 800;
+}
+body.dark .navbar {
+  background-color: rgba(0, 0, 0, 0.531);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 800;
+}
+.navbar .menu a {
+  position: relative;
+  text-decoration: none;
+}
+
+.navbar .menu a::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: #0f0f0f;
+  opacity: 0.6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar .menu a:hover::after {
+  transform: scaleX(1);
+}
+
+body.dark .navbar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* button  */
+.main-btn {
+  background: linear-gradient(135deg, #0f0f0f 0%, #3a3a3a 100%);
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .main-btn {
+  background: linear-gradient(135deg, #f5f5f5 0%, #979797 100%);
+  border: 1px solid #d5d5d5;
+  color: #0a0a0a;
+}
+
+body.dark .main-btn:hover {
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* tech item cards */
+.tech-item {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.dark .tech-item {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark .tech-item:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* progress bar  */
+.progress-accent {
+  background-color: #e5e5e5;
+}
+
+.progress-accent::-webkit-progress-value {
+  background: linear-gradient(90deg, #e0e0e0, #3a3a3a);
+}
+
+.progress-accent::-moz-progress-bar {
+  background: linear-gradient(90deg, #0f0f0f, #3a3a3a);
+}
+
+body.dark .progress-accent {
+  background-color: #2a2a2a;
+}
+
+body.dark .progress-accent::-webkit-progress-value {
+  background: linear-gradient(90deg, #262626, #d5d5d5);
+}
+
+body.dark .progress-accent::-moz-progress-bar {
+  background: linear-gradient(90deg, #f5f5f5, #d5d5d5);
+}
+
+/* theme toggle button */
+#theme-toggle {
+  padding: 0.75rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+}
+
+#theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.dark #theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* hero section */
+.hero-img {
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+body.dark .hero-img {
+  filter: drop-shadow(0 20px 40px rgba(255, 255, 255, 0.15));
+}
+
+/* video background overlay */
+.video-bg {
+  filter: brightness(0.7);
+  
+}
+
+body.dark .video-bg {
+  filter: brightness(0.4);
+}
+
+/* gradient background */
+.gradient-bg {
+  background: linear-gradient(180deg, #eaeaea 0%, #f0f0f0 100%);
+}
+
+body.dark .gradient-bg {
+  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+}
+
+/* section title underline */
+.section-underline {
+  background: linear-gradient(90deg, transparent, #1a1a1a, transparent);
+}
+
+body.dark .section-underline {
+  background: linear-gradient(90deg, transparent, #f5f5f5, transparent);
+}
+
+/* about section */
+.about-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.dark .about-card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* tab buttons */
+.tab-btn {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: inherit;
+}
+
+.tab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.active-btn {
+  background: linear-gradient(135deg, #0f0f0f 0%, #3a3a3a 100%);
+  color: white;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .tab-btn {
+  background: rgba(20, 20, 20, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark .tab-btn:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .active-btn {
+  background: linear-gradient(135deg, #f5f5f5 0%, #979797 100%);
+  color: #0a0a0a;
+  border: 1px solid #d5d5d5;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* content animation */
+#info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#info.opacity-0 {
+  opacity: 0;
+}
+
+#info.translate-y-2 {
+  transform: translateY(0.5rem);
+}
+
+#info.opacity-100 {
+  opacity: 1;
+}
+
+#info.translate-y-0 {
+  transform: translateY(0);
+}
+
+/* testimonials */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.2);
+  translate: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+body.dark .testimonial-card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body.dark .testimonial-card:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* contact form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+body.dark .contact-form {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* social links */
+.social-link {
+  border: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.social-link:hover {
+  background: linear-gradient(135deg, #e1eaec 0%, #bb66dda8 100%);
+}
+
+body.dark .social-link {
+  background: rgba(20, 20, 20, 0.5);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+body.dark .social-link:hover {
+  background: linear-gradient(135deg, #7dbecc 0%, #0a080aa8 100%);
+}
+
+/* success modal */
+.modal-box {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+body.dark .modal-box {
+  background: rgba(20, 20, 20, 0.95);
+}
+
+.success-icon {
+  background: rgba(34, 197, 94, 0.2);
+  color: rgb(34, 197, 94);
+}
+
+body.dark .success-icon {
+  background: rgba(34, 197, 94, 0.3);
+  color: rgb(74, 222, 128);
+}
+
+/* footer */
+.footer-section {
+  background: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.dark .footer-section {
+  background: rgba(20, 20, 20, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* project cards */
+.project-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+body.dark .project-card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+body.dark .project-card:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* input*/
+
+body.dark .input {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+body.dark .textarea {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
