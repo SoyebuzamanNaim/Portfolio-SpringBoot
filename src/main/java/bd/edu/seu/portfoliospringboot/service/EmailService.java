@@ -12,7 +12,7 @@ public class EmailService {
 
     @Autowired
     private JavaMailSender mailSender;
-
+// from to both are my mail
     @Value("${spring.mail.username}")
     private String fromEmail;
 
@@ -33,6 +33,8 @@ public class EmailService {
         if (massage.getPhone() != null && !massage.getPhone().trim().isEmpty()) {
             emailBody.append("Phone: ").append(massage.getPhone()).append("\n");
         }
+
+
 
         emailBody.append("\nMessage:\n").append(massage.getMessage());
 
