@@ -62,44 +62,44 @@ scrollToTopBtn.addEventListener("click", () => {
 const contactForm = document.getElementById("contactForm");
 const successModal = document.getElementById("success_modal");
 
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
+// Check if there's a success message and show modal
+window.addEventListener("DOMContentLoaded", () => {
+  // Check for success message
+  const successMessage = document.querySelector(".alert-success");
+  const errorMessage = document.querySelector(".alert-error");
+  const contactSection = document.getElementById("contact");
 
-  const formData = new FormData(contactForm);
-  const submitButton = contactForm.querySelector('button[type="submit"]');
-  const originalButtonText = submitButton.innerHTML;
+  // Reset form after successful submission
+  if (successMessage && contactForm) {
+    contactForm.reset();
+  }
 
-  // Show loading state
-  submitButton.disabled = true;
-  submitButton.innerHTML =
-    '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+  // Scroll to contact section if there's a message
+  if (successMessage || errorMessage) {
+    if (contactSection) {
+      // Small delay to ensure page is fully loaded
+      setTimeout(() => {
+        contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      // Show success modal
-      successModal.showModal();
-      // Reset form
-      contactForm.reset();
-    } else {
-      throw new Error("Form submission failed");
+        // Show success modal if there's a success message
+        if (successMessage && successModal) {
+          setTimeout(() => {
+            successModal.showModal();
+          }, 800);
+        }
+      }, 100);
     }
-  } catch (error) {
-    alert("Oops! Something went wrong. Please try again later.");
-    console.error("Form submission error:", error);
-  } finally {
-    // Restore button state
-    submitButton.disabled = false;
-    submitButton.innerHTML = originalButtonText;
   }
 });
 
+contactForm.addEventListener("submit", (e) => {
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.innerHTML;
+
+  submitButton.disabled = true;
+  submitButton.innerHTML =
+    '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+});
 
 // about me
 
@@ -218,7 +218,7 @@ const content = {
   `,
 };
 
-  // function to smoothly load content
+// function to smoothly load content
 let timeoutId;
 function loadContent(type) {
   info.classList.add("opacity-0", "translate-y-2");
@@ -246,4 +246,3 @@ buttons.forEach((btn) => {
 
 // load default tab (experience) on page load
 window.addEventListener("DOMContentLoaded", () => loadContent("experience"));
-

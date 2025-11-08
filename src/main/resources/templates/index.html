@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Soyebuzaman Naim</title>
     <link rel="stylesheet" href="style.css" />
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="assets/images/logo.jpeg">
-   
+    <link rel="icon" type="image/png" href="assets/images/logo.jpeg" />
+
     <!-- daisyui -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -71,7 +71,7 @@
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
-            <li><a class="active:scale-95 " href="#home">Home</a></li>
+            <li><a class="active:scale-95" href="#home">Home</a></li>
             <li><a class="active:scale-95" href="#about">About</a></li>
             <li>
               <a class="active:scale-95" href="#tech-stack">Tech Stack</a>
@@ -137,8 +137,9 @@
             </a>
             <a
               href="assets/naim-cv.pdf"
-              target="_blank " download
-              class=" px-6 py-3 main-btn text-white font-semibold justify-center flex items-center gap-2 rounded-md"
+              target="_blank "
+              download
+              class="px-6 py-3 main-btn text-white font-semibold justify-center flex items-center gap-2 rounded-md"
             >
               <i class="fa-solid fa-file-pdf"></i> Resume
             </a>
@@ -157,70 +158,68 @@
     </section>
 
     <!-- About Me Section -->
-   <section id="about" class="py-20 gradient-bg">
-     <div class="container mx-auto px-10">
-       <div class="text-center mb-16">
-         <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#about">About Me</a></h2>
-         <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
-       </div>
+    <section id="about" class="py-20 gradient-bg">
+      <div class="container mx-auto px-10">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <a href="#about">About Me</a>
+          </h2>
+          <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
+        </div>
 
-
-       <div
-         class=" mx-auto about-card p-8 md:p-10 rounded-2xl backdrop-blur-md"
-       >
-         <!-- Tab Buttons -->
-         <div class="flex flex-wrap justify-center gap-4 mb-8">
-           <button
-             id="btn-experience"
-             class="tab-btn active-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-           >
-             <i class="fa-solid fa-briefcase mr-2"></i>Experience
-           </button>
+        <div
+          class="mx-auto about-card p-8 md:p-10 rounded-2xl backdrop-blur-md"
+        >
+          <!-- Tab Buttons -->
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
             <button
-             id="btn-education" 
-             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-           >
-             <i class="fa-solid fa-graduation-cap mr-2"></i>Education
-           </button>
-           <button
-             id="btn-certification"
-             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-           >
-             <i class="fa-solid fa-certificate mr-2"></i>Certification
-           </button>
-           <button
-             id="btn-cp"
-             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-           >
-             <i class="fa-solid fa-code mr-2"></i>Competitive Programming
-           </button>
+              id="btn-experience"
+              class="tab-btn active-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            >
+              <i class="fa-solid fa-briefcase mr-2"></i>Experience
+            </button>
             <button
-             id="btn-hobbies" 
-             class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-           >
-             <i class="fa-solid fa-palette mr-2"></i>Hobbies
-           </button>
-           
-          
-         </div>
+              id="btn-education"
+              class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            >
+              <i class="fa-solid fa-graduation-cap mr-2"></i>Education
+            </button>
+            <button
+              id="btn-certification"
+              class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            >
+              <i class="fa-solid fa-certificate mr-2"></i>Certification
+            </button>
+            <button
+              id="btn-cp"
+              class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            >
+              <i class="fa-solid fa-code mr-2"></i>Competitive Programming
+            </button>
+            <button
+              id="btn-hobbies"
+              class="tab-btn px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            >
+              <i class="fa-solid fa-palette mr-2"></i>Hobbies
+            </button>
+          </div>
 
-
-         <!-- Content Container -->
-         <div
-           id="info"
-           class="text-center text-lg leading-relaxed transition-all duration-300"
-         ></div>
-       </div>
-     </div>
-   </section>
-
-
+          <!-- Content Container -->
+          <div
+            id="info"
+            class="text-center text-lg leading-relaxed transition-all duration-300"
+          ></div>
+        </div>
+      </div>
+    </section>
 
     <!-- tech stack section -->
     <section id="tech-stack" class="py-20 gradient-bg">
       <div class="container mx-auto px-10">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#tech-stack">Tech Stack I Use</a></h2>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <a href="#tech-stack">Tech Stack I Use</a>
+          </h2>
           <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
         </div>
 
@@ -443,9 +442,11 @@
     </section>
     <!-- testimonials  -->
     <section id="testimonials" class="py-20 gradient-bg">
-      <div class="container mx-auto ">
+      <div class="container mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#testimonials">Testimonials</a></h2>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <a href="#testimonials">Testimonials</a>
+          </h2>
           <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
         </div>
 
@@ -552,7 +553,9 @@
     <section id="my-projects" class="py-24 gradient-bg">
       <div class="container mx-auto px-6 md:px-10">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4"><a href="#my-projects">My Projects</a></h2>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <a href="#my-projects">My Projects</a>
+          </h2>
           <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
         </div>
 
@@ -685,12 +688,14 @@
     <section id="contact" class="py-20 gradient-bg">
       <div class="container mx-auto px-10">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4 "><a href="#contact">Get In Touch</a></h2>
+          <h2 class="text-4xl md:text-5xl font-bold mb-4">
+            <a href="#contact">Get In Touch</a>
+          </h2>
           <div class="w-24 md:w-52 h-1 mx-auto section-underline"></div>
         </div>
 
         <div
-          class="flex flex-col-reverse md:grid md:grid-cols-2 gap-12  mx-auto"
+          class="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 mx-auto"
         >
           <!-- Contact Info -->
           <div class="flex flex-col justify-between space-y-8">
@@ -703,7 +708,7 @@
                 </div>
                 <div>
                   <h3 class="font-semibold text-lg">Email</h3>
-                  <p class="opacity-70 ">soyebuzamannaim@gmail.com</p>
+                  <p class="opacity-70">soyebuzamannaim@gmail.com</p>
                 </div>
               </div>
 
@@ -715,7 +720,7 @@
                 </div>
                 <div>
                   <h3 class="font-semibold text-lg">Phone</h3>
-                  <p class="opacity-70 ">01572919076</p>
+                  <p class="opacity-70">01572919076</p>
                 </div>
               </div>
 
@@ -765,50 +770,103 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
+          <!-- contact form -->
           <div class="contact-form p-8 rounded-2xl backdrop-blur-md">
+            <!-- error message -->
+            <div th:if="${error}" class="alert alert-error mb-4">
+              <i class="fas fa-times-circle text-2xl shrink-0 h-6 w-6 mr-2"></i>
+              <span th:text="${error}"></span>
+            </div>
+
+            <!-- success message -->
+            <div th:if="${success}" class="alert alert-success mb-4">
+              <i class="fas fa-check-circle text-2xl shrink-0 h-6 w-6 mr-2"></i>
+              <span th:text="${success}"></span>
+            </div>
+
             <form
               id="contactForm"
-              action="https://api.web3forms.com/submit"
+              th:action="@{/contact}"
               method="POST"
               class="space-y-6"
             >
               <input
                 type="hidden"
-                name="access_key"
-                value="390be4d3-ba0f-49c5-aa4c-3a10bd1b9c4e"
+                th:name="captchaExpected"
+                th:value="${captchaExpected}"
+                id="captchaExpected"
               />
 
               <div>
-                <label class=" block text-sm font-medium mb-2">Name</label>
+                <label class="block text-sm font-medium mb-2"
+                  >Name <span class="text-red-500">*</span></label
+                >
                 <input
                   type="text"
-                  name="name"
+                  th:name="name"
+                  th:value="${massage?.name}"
                   class="input input-bordered w-full"
                   placeholder="Your Name"
                   required
                 />
               </div>
+
               <div>
                 <label class="block text-sm font-medium mb-2">Email</label>
                 <input
                   type="email"
-                  name="email"
+                  th:name="email"
+                  th:value="${massage?.email}"
                   class="input input-bordered w-full"
                   placeholder="your@email.com"
-                  required
                 />
               </div>
 
               <div>
-                <label class="block text-sm font-medium mb-2">Message</label>
+                <label class="block text-sm font-medium mb-2">Phone</label>
+                <input
+                  type="tel"
+                  th:name="phone"
+                  th:value="${massage?.phone}"
+                  class="input input-bordered w-full"
+                  placeholder="+880 1234 567890"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium mb-2"
+                  >Message <span class="text-red-500">*</span></label
+                >
                 <textarea
-                  name="message"
+                  th:name="message"
+                  th:text="${massage?.message}"
                   class="textarea textarea-bordered w-full h-32"
                   placeholder="Tell me about your project..."
                   required
-                ></textarea>
+                >
+                <span th:text="${massage?.message}"></span>
+                </textarea>
               </div>
+
+              <!-- CAPTCHA -->
+              <div>
+                <label class="block text-sm font-medium mb-2">
+                  CAPTCHA:
+                  <span class="font-bold text-lg"
+                    ><span th:text="${captchaNum1}"></span> +
+                    <span th:text="${captchaNum2}"></span> =
+                  </span>
+                  <span class="text-red-500">*</span>
+                </label>
+                <input
+                  type="number"
+                  th:name="captchaAnswer"
+                  class="input input-bordered w-full"
+                  placeholder="Enter the answer"
+                  required
+                />
+              </div>
+
               <button
                 type="submit"
                 id="sendMessageBtn"
@@ -845,7 +903,11 @@
         </div>
         <h3 class="text-2xl font-bold mb-2">Message Sent Successfully!</h3>
         <p class="py-4 opacity-70">
-          Thank you for reaching out! I'll get back to you as soon as possible.
+          <span th:if="${success}" th:text="${success}"></span>
+          <span th:unless="${success}"
+            >Thank you for reaching out! I will get back to you as soon as
+            possible.</span
+          >
         </p>
         <div class="modal-action justify-center">
           <form method="dialog">
